@@ -17,7 +17,7 @@ document.addEventListener("click", function (e) {
 // Data produk
 const products = {
   1: {
-    img: "/assets/img/1.jpg",
+    img: "assets/img/1.jpg",
     title: "SPANDUK",
     speksifikasiTitle: "Spesifikasi",
     contentDesc1: "1. High resolution.",
@@ -36,7 +36,7 @@ const products = {
     price: "Rp 25.000",
   },
   2: {
-    img: "/assets/img/2.jpg",
+    img: "assets/img/2.jpg",
     title: " ALBUM KENGANAN",
     contentDesc1: "1. Hard cover(Lamnating glosy/doff).",
     contentDesc2: "2. Isi artpaper 150 gram(Glosy).",
@@ -54,7 +54,7 @@ const products = {
     price: "Rp 85.000",
   },
   3: {
-    img: "/assets/img/3.jpg",
+    img: "assets/img/3.jpg",
     title: "SPANDUK",
     contentDesc1: "1. High resolution.",
     contentDesc2: "2. Gratis desain.",
@@ -65,7 +65,7 @@ const products = {
     price: "Rp 25.000",
   },
   4: {
-    img: "/assets/img/4.jpg",
+    img: "assets/img/4.jpg",
     title: "SPANDUK",
     contentDesc1: "1. High resolution.",
     contentDesc2: "2. Gratis desain.",
@@ -76,7 +76,7 @@ const products = {
     price: "Rp 25.000",
   },
   5: {
-    img: "/assets/img/5.jpg",
+    img: "assets/img/5.jpg",
     title: "SPANDUK",
     contentDesc1: "1. High resolution.",
     contentDesc2: "2. Gratis desain.",

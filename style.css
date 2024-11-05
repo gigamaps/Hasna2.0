@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Alley Oop";
-  src: url("/assets/alley-oop.ttf") format("truetype");
+  src: url("assets/alley-oop.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
@@ -85,7 +85,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("/assets/img/backgroundhome.jpg");
+  background-image: url("assets/img/backgroundhome.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -1,0 +1,804 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Alley Oop";
+  src: url("/assets/alley-oop.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: white;
+  color: black;
+}
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #5ac05a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo .logo {
+  width: 126px;
+  height: 34px;
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav a:hover,
+.navbar .navbar-extra a:hover,
+.contact .row .contact-content2 div p:hover,
+.footer-distribute .footer-left .footer-links a:hover,
+.footer-distribute .footer-center .alamat:hover,
+.footer-distribute .footer-right .footer-icon a:hover {
+  color: #5ac05a;
+  transform: scale(1.05);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #5ac05a;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0.5rem;
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* navbar end */
+
+/* hero section start */
+.hero {
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/img/backgroundhome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 19%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4.5em;
+  text-shadow: 2px 2px 2px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #5ac05a;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 380;
+  text-shadow: 1rem 1rem 1rem rgba(1, 1, 3, 0.748);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4rem;
+  /* mix-blend-mode: difference; */
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #5ac05a;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero .content .cta:hover {
+  color: black;
+  transform: scale(1.05);
+}
+/* hero section end */
+
+/* product section start */
+.product h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.product p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 200;
+}
+
+.product .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.product .row .product-card {
+  text-align: center;
+  padding: 1rem 1rem;
+  padding-bottom: 1.5rem;
+  border: 0.2rem solid #cccccc; /* Warna bingkai */
+  border-radius: 10px; /* Membuat sudut bingkai melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan bayangan di sekitar bingkai */
+  margin: 0.5rem; /* Jarak antar kartu produk */
+  background-color: rgba(213, 213, 213, 0.523); /* Warna latar belakang kartu */
+  transition: transform 0.3s ease-in-out; /* Animasi saat hover */
+}
+
+.product .row .product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product .row .product-card img {
+  border-radius: 10px;
+  width: 228px;
+  height: 228px;
+}
+
+.product .row .product-card .product-card-title {
+  margin: 0.7rem auto;
+  font-size: 1rem;
+}
+
+.product .row .product-card .product-card-price {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.product .row .product-card .product-icon .btn-pesan,
+.product .row .product-card .product-icon .detail-btn {
+  text-decoration: none;
+  background-color: grey;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.product .row .product-card .product-icon .btn-pesan:hover,
+.product .row .product-card .product-icon .detail-btn:hover {
+  color: #11ee11 !important;
+}
+/* product section end */
+
+/* about section */
+.about,
+.product,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.product h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: black;
+}
+
+.about h2 span,
+.product h2 span,
+.contact h2 span {
+  color: #5ac05a;
+}
+
+.about .row,
+.contact .row {
+  display: flex;
+}
+
+.about .row .about-content,
+.contact .row .contact-content1,
+.contact .row .contact-content2 {
+  flex: 1 1 50rem;
+  padding: 0 1rem;
+}
+
+.about .row .about-content h3,
+.contact .row .contact-content1 h3 {
+  color: #5ac05a;
+}
+
+.about .row .about-content h3 span,
+.contact .row .contact-content1 h3 span {
+  color: black;
+}
+
+.about .row .content {
+  flex: 1 1 50rem;
+  padding: 0 1rem;
+}
+
+.about .row .about-content h3,
+.about .row .content h3,
+.contact .row .contact-content1 h3,
+.contact .row .contact-content2 h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .about-content p,
+.contact .row .contact-content1 p,
+.contact .row .contact-content2 p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.about .row .content p::before {
+  content: "➤ ";
+  margin-right: 0.5rem;
+}
+
+/* contact section */
+.contact .row .contact-content2 i {
+  background-color: #33383b;
+  color: white;
+  font-size: 25px;
+  padding: 1rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.contact .row .contact-content2 div p::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #5ac05a;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.contact .row .contact-content2 div p:hover::after {
+  transform: scaleX(0.8);
+}
+
+.contact .row .contact-content2 div p {
+  display: inline-block;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 1rem;
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* button whatapp start */
+.wa_btn {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(37, 211, 102);
+  padding: 10px 20px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wa_btn i {
+  font-size: 50px;
+  padding: 0 10px;
+  background-color: rgb(37, 211, 102);
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 80px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wa_btn:hover,
+.wa_btn i:hover {
+  color: black;
+  transform: scale(1.05);
+}
+/* button whatapp end */
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+.footer-distribute {
+  background-color: black;
+  box-sizing: border-box;
+  widows: 100%;
+  text-align: center;
+  font-family: "poppins", sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer-distribute .footer-left,
+.footer-distribute .footer-center,
+.footer-distribute .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distribute .footer-left {
+  width: 30%;
+}
+
+.footer-distribute .footer-left .footer-brand {
+  font-family: "alley oop", sans-serif;
+  font-weight: 100;
+  color: #5ac05a;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.footer-distribute .footer-left .footer-brand span {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+/* Footer links */
+
+.footer-distribute .footer-left .footer-links {
+  color: white;
+  margin: 20px 0 12px;
+}
+
+.footer-distribute .footer-left .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-distribute .footer-left .footer-links a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #5ac05a;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.footer-distribute .footer-left .footer-links a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.footer-distribute .footer-left .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distribute .footer-center {
+  width: 35%;
+  text-align: left;
+}
+
+.footer-distribute .footer-center .alamat {
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-distribute .footer-center .alamat p:hover,
+.footer-distribute .footer-center .alamat a p span:hover {
+  color: #5ac05a;
+}
+
+.footer-distribute .footer-center div i {
+  background-color: #33383b;
+  color: white;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: left;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: top;
+}
+
+.footer-distribute .footer-center div i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distribute .footer-center div p {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: justify;
+}
+
+.footer-distribute .footer-center div p span {
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2;
+  text-align: justify;
+  width: 20rem;
+  color: #8f9296;
+}
+
+.footer-distribute .footer-center div a p {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distribute .footer-right {
+  width: 30%;
+}
+
+.footer-distribute .footer-right .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distribute .footer-right .footer-company-about span {
+  display: block;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distribute .footer-right .footer-icon {
+  margin-top: 25px;
+}
+
+.footer-distribute .footer-right .footer-icon a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: black;
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 60%;
+  height: fit-content;
+  animation: animateModal 0.5s;
+  border-radius: 20px;
+}
+
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal .modal-container .modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 10px;
+}
+
+.modal .modal-container .modal-content img {
+  height: 25rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.modal .modal-container .modal-content h3 {
+  margin: 1rem 0 10px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.modal .modal-container .modal-content p {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 0.3rem;
+}
+
+.modal .modal-container .modal-content #modal-price {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.modal .modal-container .modal-content .modal-product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.modal .modal-container .modal-content .close {
+  color: #aaa;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .modal-container .modal-content .close:hover,
+.modal .modal-container .modal-content .close:focus {
+  color: black;
+}
+
+.modal .modal-container .modal-content .modal-product-content .btn-pesan {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #5ac05a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* cursor: pointer; */
+  transition: background-color 0.3s;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.order-btn:hover {
+  background-color: #1e8449;
+}
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  .contact .row .contact-content2 .whatapp-icon,
+  .contact .row .contact-content2 .instagram-icon,
+  .contact .row .contact-content2 .map-icon {
+    display: flex; /* Memastikan tetap dalam satu baris */
+    flex-direction: row; /* Menjaga ikon dan teks dalam baris */
+    align-items: center; /* Menjaga teks tetap sejajar dengan ikon */
+    gap: 5px; /* Mengurangi jarak antar elemen jika diperlukan */
+    text-align: left; /* Memastikan teks tetap rata kiri */
+  }
+
+  footer {
+    position: static;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  /* navbar */
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 25rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    margin: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  /* product section */
+  .product p {
+    font-size: 1.2rem;
+  }
+
+  /* about & contact section */
+  .about .row,
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .content,
+  .contact .row .contact-content1,
+  .about .row .about-content,
+  .contact .row .contact-content2 {
+    padding: 0;
+  }
+
+  .about .row .about-content h3,
+  .contact .row .contact-content1 h3,
+  .contact .row .contact-content2 h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .about-content h3,
+  .contact .row .contact-content1 h3,
+  .contact .row .contact-content2 h3 {
+    font-size: 1.5rem;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.5rem;
+  }
+
+  /* whatapp button start */
+  .wa_btn {
+    background-color: transparent;
+  }
+  .wa_btn span {
+    display: none;
+  }
+  .wa_btn i {
+    right: 0;
+  }
+  /* whatapp button end */
+
+  /* footer responsive start*/
+  .footer-distribute .footer-left,
+  .footer-distribute .footer-center,
+  .footer-distribute .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distribute .footer-center i {
+    margin-left: 0;
+  }
+
+  /* footer responsive end*/
+
+  /* modal box */
+  .modal .modal-container {
+    width: fit-content;
+  }
+
+  .modal .modal-container .modal-content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

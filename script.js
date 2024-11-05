@@ -54,7 +54,7 @@ const products = {
     price: "Rp 85.000",
   },
   3: {
-    img: "/assets/img/3.jpg",
+    img: "assets/img/3.jpg",
     title: "SPANDUK",
     contentDesc1: "1. High resolution.",
     contentDesc2: "2. Gratis desain.",

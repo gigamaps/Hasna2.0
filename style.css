@@ -569,7 +569,7 @@ footer {
   margin: 15% auto;
   padding: 1.2rem;
   border: 1px solid #666;
-  width: 60%;
+  width: fit-content;
   height: fit-content;
   animation: animateModal 0.5s;
   border-radius: 20px;
@@ -614,12 +614,12 @@ footer {
   font-size: 1.2rem;
   margin: 1rem 0;
   font-weight: bold;
+  line-height: 1.5rem;
 }
 
 .modal .modal-container .modal-content .modal-product-content {
   display: flex;
   flex-direction: column;
-  align-items: start;
 }
 
 .modal .modal-container .modal-content .close {
@@ -787,14 +787,10 @@ footer {
   /* modal box */
   .modal .modal-container {
     width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
   }
-
   .modal .modal-container .modal-content {
     flex-wrap: wrap;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -803,12 +799,9 @@ footer {
     height: 35rem;
   }
 
-  .modal .modal-container .modal-content .modal-product-content .btn-pesan {
-    display: flex;
+  .modal .modal-container .modal-content .modal-product-content {
     align-items: center;
-    justify-content:center;
-    
-  } 
+  }
 }
 
 /* mobile */

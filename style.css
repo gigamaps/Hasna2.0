@@ -166,7 +166,7 @@ body {
 .product .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 2rem;
   justify-content: center;
 }
 
@@ -199,7 +199,7 @@ body {
 }
 
 .product .row .product-card .product-card-price {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   margin-bottom: 1rem;
 }

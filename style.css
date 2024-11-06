@@ -166,7 +166,7 @@ body {
 .product .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 5rem;
   justify-content: center;
 }
 
@@ -199,7 +199,7 @@ body {
 }
 
 .product .row .product-card .product-card-price {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -285,6 +285,7 @@ body {
   font-size: 1.2rem;
   font-weight: 200;
   line-height: 1.2;
+  text-align: left;
 }
 
 .about .row .content p {
@@ -294,7 +295,7 @@ body {
   line-height: 1.2;
 }
 
-.about .row .content p::before {
+.about .row .content .misi::before {
   content: "➤ ";
   margin-right: 0.5rem;
 }
@@ -325,10 +326,25 @@ body {
 .contact .row .contact-content2 div p {
   display: inline-block;
   align-items: center;
-  gap: 1rem;
   margin: 1.5rem 1rem;
   color: black;
   transition: transform 0.3s ease-in-out;
+}
+
+.contact .row .contact-content2 .whatapp-icon,
+.contact .row .contact-content2 .instagram-icon,
+.contact .row .contact-content2 .email-icon,
+.contact .row .contact-content2 .map-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.contact .row .contact-content2 .map-icon .alamat-contact {
+  margin: 0.9rem;
+  text-align: justify;
 }
 
 /* button whatapp start */
@@ -372,7 +388,7 @@ body {
 
 /* footer */
 footer {
-  position: fixed;
+  position: static;
   bottom: 0;
 }
 .footer-distribute {
@@ -449,7 +465,7 @@ footer {
 
 .footer-distribute .footer-center {
   width: 35%;
-  text-align: left;
+  text-align: justify;
 }
 
 .footer-distribute .footer-center .alamat {
@@ -468,7 +484,7 @@ footer {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  text-align: left;
+  text-align: justify;
   line-height: 42px;
   margin: 10px 15px;
   vertical-align: top;
@@ -486,7 +502,7 @@ footer {
   font-weight: 200;
   font-size: 1.5rem;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
 .footer-distribute .footer-center div p span {
@@ -494,7 +510,7 @@ footer {
   font-weight: normal;
   font-size: 1rem;
   line-height: 2;
-  text-align: justify;
+  text-align: left;
   width: 20rem;
   color: #8f9296;
 }
@@ -651,25 +667,12 @@ footer {
   justify-content: center;
 }
 
-.order-btn:hover {
-  background-color: #1e8449;
-}
-
 /* media queries */
+
 /* laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
-  }
-
-  .contact .row .contact-content2 .whatapp-icon,
-  .contact .row .contact-content2 .instagram-icon,
-  .contact .row .contact-content2 .map-icon {
-    display: flex; /* Memastikan tetap dalam satu baris */
-    flex-direction: row; /* Menjaga ikon dan teks dalam baris */
-    align-items: center; /* Menjaga teks tetap sejajar dengan ikon */
-    gap: 5px; /* Mengurangi jarak antar elemen jika diperlukan */
-    text-align: left; /* Memastikan teks tetap rata kiri */
   }
 
   footer {
